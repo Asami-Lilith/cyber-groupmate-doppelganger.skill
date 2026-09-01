@@ -1,8 +1,11 @@
 {
-  "base": "soul.skill",
+  "base": "immortal-skill",
   "dynamic_weights": {
-    "recent_messages_weight": 0.6,
-    "emoji_weight": 0.3,
-    "base_persona_weight": 0.1
+    "recent_messages_weight": 0.45,
+    "emoji_weight": 0.25,
+    "base_persona_weight": 0.3
+  },
+  "decay": {
+    "half_life_days": 7
   }
 }

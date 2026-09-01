@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ## 3. 配置
 ```bash
 cp config/persona.json.example config/persona.json
-# 填入 soul.skill 人设与 target_user_id
+# 填入 immortal-skill 人设与 target_user_id
 ```
 
 ## 4. 验证（无需真实群）

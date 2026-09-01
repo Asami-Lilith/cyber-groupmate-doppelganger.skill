@@ -13,7 +13,7 @@
 | **processors** | 清洗、分词、高频统计 | `data/recent_messages` | `data/keywords/high_freq.json` |
 | **mcp-servers/emoji-tagger** | 表情语义标记（可选） | `data/emojis/*.png` | `data/emojis/tags.json` |
 | **updater + scripts/update_recent.py** | 调度与权重计算 | 上述 data | `data/keywords/high_freq.json` 更新 |
-| **persona** | 合并 soul.skill + 动态权重 | `config/persona.json` + data | 最终 Prompt |
+| **persona** | 合并 immortal-skill + 动态权重 | `config/persona.json` + data | 最终 Prompt |
 
 ## 时序
 ```mermaid

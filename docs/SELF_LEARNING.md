@@ -8,16 +8,16 @@
 `config/persona.json`：
 ```json
 {
-  "base": "soul.skill",
+  "base": "immortal-skill",
   "dynamic_weights": {
-    "recent_messages_weight": 0.6,
-    "emoji_weight": 0.3,
-    "base_persona_weight": 0.1
+    "recent_messages_weight": 0.45,
+    "emoji_weight": 0.25,
+    "base_persona_weight": 0.30
   },
   "decay": {"half_life_days": 7}
 }
 ```
-最终 Prompt = base_persona *0.1 + 近期高频词/句式 *0.6 + 表情偏好 *0.3
+最终 Prompt = base_persona *0.30 + 近期高频词/句式 *0.45 + 表情偏好 *0.25
 7 天前发言权重减半，避免过时口头禅残留。
 
 ## 为何脚本足够？

@@ -8,7 +8,7 @@
 2. **processors/** jieba 高频词提取
 3. **mcp-servers/emoji-tagger** 可选，表情语义标记
 4. **scripts/update_recent.py** 核心，Skill 调用时增量更新
-5. **persona/** 合并 soul.skill + 动态权重
+5. **persona/** 合并 immortal-skill + 动态权重
 
 ## 阶段
 - Phase 1 MVP：collectors(模拟) + processors + update_recent.py

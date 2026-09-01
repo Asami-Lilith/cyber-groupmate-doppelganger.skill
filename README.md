@@ -2,7 +2,10 @@
 
 > 群聊分身 · 轻量自学习 Skill
 >为了让某位群友赛博永生实在是费劲了心思
-> 基于 `soul.skill` 人设底座 + 近期发言/高频表情包动态权重，Skill 每次被调用时运行脚本增量更新，反哺给 LLM。
+>
+> 基于 `immortal-skill` 人设底座 + 近期发言/高频表情包动态权重，Skill 每次被调用时运行脚本增量更新，反哺给 LLM。
+ + 近期发言/高频表情包动态权重，Skill 每次被调用时运行脚本增量更新，反哺给 LLM。
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](docs/SETUP.md) [![Status: Planning](https://img.shields.io/badge/status-计划阶段-yellow)](PLAN.md)
 
@@ -25,7 +28,7 @@
                                     |
             [SKILL.md 被调用] --> [scripts/update_recent.py] --> [config/persona.json 动态权重]
                                     |
-                            [src/persona] 合并 soul.skill + 动态权重 --> LLM
+                            [src/persona] 合并 immortal-skill + 动态权重 --> LLM
 ```
 详见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
@@ -39,7 +42,7 @@ cyber-groupmate-doppelganger.skill/
 ├── src/
 │   ├── collectors/            # 采集：消息/表情拉取
 │   ├── processors/            # 处理：jieba清洗统计
-│   ├── persona/               # 人设：合并 soul.skill + 权重
+│   ├── persona/               # 人设：合并 immortal-skill + 权重
 │   └── updater/               # 更新：调度逻辑
 ├── mcp-servers/emoji-tagger/  # 可选 MCP 服务
 ├── scripts/

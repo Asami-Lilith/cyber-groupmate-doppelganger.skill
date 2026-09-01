@@ -3,9 +3,13 @@ name: cyber-groupmate-doppelganger
 version: 0.1.0
 description: 群聊分身，轻量自学习（脚本增量更新近期发言与表情）
 triggers:
-  - on_call: "python scripts/update_recent.py"
+  - on_call: "python scripts/update_recent.py && python src/persona/merge.py"
 ---
 
 # Cyber Groupmate Doppelganger
 
-轻量 Skill：每次被调用时触发 `scripts/update_recent.py`，增量更新近期发言与表情数据，融合到人设中。无需模型训练。
+轻量 Skill：每次被调用时依次执行：
+1. `scripts/update_recent.py` 增量更新近期发言与表情 -> `data/keywords/high_freq.json`
+2. `src/persona/merge.py` 合并 immortal-skill 底座 + 动态权重 -> `data/persona_injected.md`
+
+Agent 将 `data/persona_injected.md` 作为 System Prompt 注入，近期动态权重 0.6 高于底座 0.1。

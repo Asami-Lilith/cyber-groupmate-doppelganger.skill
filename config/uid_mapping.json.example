@@ -1,0 +1,12 @@
+{
+  "_comment": "QQ官方Bot只能拿到openID，需手动映射 <群ID, openID> -> 目标人物",
+  "groups": {
+    "123456789": {
+      "openID_A1B2C3": "目标人物",
+      "openID_X7Y8Z9": "群友A"
+    },
+    "987654321": {
+      "openID_Q1W2E3": "目标人物"
+    }
+  }
+}
