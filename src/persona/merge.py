@@ -37,25 +37,26 @@ def main():
 
     soul = load_base()
 
+    # 权重不直接给 LLM 看数字，而是翻译为：数量/位置/优先级措辞
+    recent_n = int(10 * w_recent / 0.45) if w_recent else 8  # 0.45->10词, 按比例
+    base_n = 3 if w_base < 0.4 else 5
     prompt = f"""# Persona Injection - Cyber Groupmate Doppelganger
 
-## 1. 基础人设 (immortal-skill) 权重 {w_base}
+## 1. 基础人设 (immortal-skill) - 兜底参考
 {soul}
 
-## 2. 近期动态权重 {w_recent} 【高优先级，冲突时以此为准】
-### 高频词（Top10，必须自然融入回答，不要堆砌）：
+## 2. 近期动态 【高优先级，冲突时以此为准，必须优先模仿】
+### 高频词（Top{recent_n}，必须自然融入回答，不要堆砌）：
 {top_words}
-### 典型句式/语气：参考 data/recent_messages 中最近5条原话的句式
-### 指令：你的用词、口头禅、缩写必须贴近上述高频词，权重 {w_recent}，明显高于基础人设。
+### 典型句式：参考 data/recent_messages 中最近5条原话的句式（已按时间衰减）
+### 指令：你的用词、口头禅、缩写必须贴近上述高频词；近期动态的优先级明显高于基础人设。
 
-## 3. 表情包偏好 权重 {w_emoji}
-{emoji_desc}
-### 指令：合适时使用上述表情包对应的情绪，避免滥用，权重 {w_emoji}。
+## 3. 表情包工具
+{emoji_desc and f"可用表情：{emoji_desc}。合适时可调用 send_sticker" or "暂无表情包规则"}
 
 ## 4. 融合规则
-- 近期动态 > 基础人设，权重比 {w_recent}:{w_base}
-- 不要提及你是在模仿或权重，保持自然
-- 时间衰减已在 high_freq.json 中处理，直接使用即可
+- 近期动态优先于基础人设，遇矛盾以近期为准
+- 不要提及模仿或权重，保持自然
 """
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(prompt, encoding="utf-8")
