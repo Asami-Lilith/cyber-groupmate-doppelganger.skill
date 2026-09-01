@@ -15,7 +15,7 @@ git clone https://github.com/<you>/cyber-groupmate-doppelganger.skill.git
 cd cyber-groupmate-doppelganger.skill
 /opt/homebrew/opt/python@3.12/bin/python3.12 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements.txt  # 若遇 externally-managed-environment，改用 pip install --target .pylib -r requirements.txt
 ```
 
 ## 3. 配置

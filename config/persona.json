@@ -2,7 +2,7 @@
   "base": "immortal-skill",
   "dynamic_weights": {
     "recent_messages_weight": 0.45,
-    "emoji_weight": 0.2,
+    "emoji_weight": 0.25,
     "base_persona_weight": 0.3
   },
   "decay": {

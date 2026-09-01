@@ -3,7 +3,7 @@ name: cyber-groupmate-doppelganger
 version: 0.1.0
 description: 群聊分身，轻量自学习（脚本增量更新近期发言与表情）
 triggers:
-  - on_call: "python scripts/update_recent.py && python src/persona/merge.py"
+  - on_call: "python3 scripts/update_recent.py && python3 src/persona/merge.py"
 ---
 
 # Cyber Groupmate Doppelganger

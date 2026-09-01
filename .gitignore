@@ -2,3 +2,7 @@ data/recent_messages/*.jsonl
 data/emojis/*.png
 __pycache__/
 .venv/
+
+test_fix.txt
+papers-reference.zip
+.pylib/
