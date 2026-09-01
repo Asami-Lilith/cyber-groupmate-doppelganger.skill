@@ -1,7 +1,7 @@
 # Cyber Groupmate Doppelganger.skill
 
 > 群聊分身 · 轻量自学习 Skill
->
+>为了让某位群友赛博永生实在是费劲了心思
 > 基于 `soul.skill` 人设底座 + 近期发言/高频表情包动态权重，Skill 每次被调用时运行脚本增量更新，反哺给 LLM。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](docs/SETUP.md) [![Status: Planning](https://img.shields.io/badge/status-计划阶段-yellow)](PLAN.md)
