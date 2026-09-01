@@ -2,6 +2,7 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent / ".pylib"))
 import json
 DATA_DIR = Path(__file__).parent.parent / "data"
 from src.processors.extractors import counter_keywords, tfidf_keywords, yake_keywords, textrank_keywords
@@ -47,6 +48,8 @@ if __name__ == "__main__":
         kws=fn(msgs, top_k=20)
         out=DATA_DIR/"keywords"/"high_freq.json"
         out.parent.mkdir(parents=True, exist_ok=True)
-        json.dump(dict(kws), open(out,"w",encoding="utf-8"), ensure_ascii=False, indent=2)
+        import hashlib, time
+        meta={"generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "source_messages_hash": hashlib.sha256(json.dumps(msgs, ensure_ascii=False).encode()).hexdigest()[:8], "method": args.method, "top_k": len(kws)}
+        json.dump({"meta": meta, "keywords": dict(kws)}, open(out,"w",encoding="utf-8"), ensure_ascii=False, indent=2)
         print(f"[{args.method}] {len(kws)} keywords -> {out}")
         print(kws[:8])
