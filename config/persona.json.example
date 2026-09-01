@@ -1,0 +1,10 @@
+{
+  "base": "soul.skill",
+  "target_user_id": "REPLACE_ME",
+  "dynamic_weights": {
+    "recent_messages_weight": 0.6,
+    "emoji_weight": 0.3,
+    "base_persona_weight": 0.1
+  },
+  "decay": {"half_life_days": 7}
+}

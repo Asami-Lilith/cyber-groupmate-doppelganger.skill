@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "emoji-tagger": {
+      "command": "python",
+      "args": ["mcp-servers/emoji-tagger/server.py"]
+    }
+  }
+}
