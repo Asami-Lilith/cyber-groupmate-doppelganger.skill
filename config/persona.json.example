@@ -1,9 +1,9 @@
 {
   "base": "immortal-skill",
   "dynamic_weights": {
-    "recent_messages_weight": 0.45,
-    "emoji_weight": 0.25,
-    "base_persona_weight": 0.3
+    "recent_messages_weight": 0.55,
+    "emoji_weight": 0.10,
+    "base_persona_weight": 0.35
   },
   "decay": {
     "half_life_days": 7
