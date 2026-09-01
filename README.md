@@ -7,7 +7,7 @@
  + 近期发言/高频表情包动态权重，Skill 每次被调用时运行脚本增量更新，反哺给 LLM。
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](docs/SETUP.md) [![Status: MVP](https://img.shields.io/badge/status-MVP阶段-yellow)](PLAN.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)](docs/SETUP.md) [![Status: MVP](https://img.shields.io/badge/status-Polish阶段-yellow)](PLAN.md)
 
 ## 1. 这是什么？
 提供 Skill + 脚本，输入为 qq-chat-exporter 兼容 JSON；群内机器人留档目标人物的**近期发言**与**高频表情包**，通过 MCP 对表情包语义标记，结合 `jieba` 高频词提取，在 Skill 调用时运行脚本刷新动态权重，让 Agent 越用越像真人。
@@ -70,7 +70,7 @@ python scripts/update_recent.py --demo
 
 ## 7. 项目进度
 
-> **当前进度：MVP阶段 (Planning)** — 架构与文档已完成，待实现 MVP 代码。详见 [PLAN.md](PLAN.md)
+> **当前进度：Polish阶段 (Planning)** — 架构与文档已完成，待实现 MVP 代码。详见 [PLAN.md](PLAN.md)
 
 ## 8. 文档导航
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md) - 架构与耦合

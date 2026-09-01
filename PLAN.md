@@ -11,7 +11,7 @@
 5. **persona/** 合并 immortal-skill + 动态权重
 
 ## 阶段
-- Phase 1 MVP：collectors(模拟) + processors + update_recent.py
+- Phase 1 MVP：已完成（collectors示例 + processors/tokenizer/scorers + update_recent.py 四档）
 - Phase 2 动态权重：权重融合与时间衰减
 - Phase 3 MCP：表情标记接入
 - Phase 4 开源：docs + tests
