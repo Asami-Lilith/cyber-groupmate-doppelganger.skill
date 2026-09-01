@@ -9,7 +9,7 @@
 
 | 模块 | 职责 | 输入 | 输出 |
 |------|------|------|------|
-| **collectors** | 拉取群消息/表情 | 群 API | `data/recent_messages/messages.jsonl`, `data/emojis/*.png` |
+| **collectors (示例)** | 示例拉取（用户按接口自写） | 群 API | `data/recent_messages/messages.jsonl`, `data/emojis/*.png` |
 | **processors** | 清洗、分词、高频统计 | `data/recent_messages` | `data/keywords/high_freq.json` |
 | **mcp-servers/emoji-tagger** | 表情语义标记（可选） | `data/emojis/*.png` | `data/emojis/tags.json` |
 | **updater + scripts/update_recent.py** | 调度与权重计算 | 上述 data | `data/keywords/high_freq.json` 更新 |

@@ -6,3 +6,6 @@ __pycache__/
 test_fix.txt
 papers-reference.zip
 .pylib/
+# incremental checkpoint (atomic write, not committed)
+**/.state.json
+.data_state.json

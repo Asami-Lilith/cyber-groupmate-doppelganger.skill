@@ -4,7 +4,7 @@
 无需 post-training，仅脚本 + Skill 自学习实现群聊分身。
 
 ## 模块
-1. **collectors/** 消息/表情采集，写入 data/
+1. **collectors/** 示例采集器（仅示例，真实接入由用户自写）
 2. **processors/** jieba 高频词提取
 3. **mcp-servers/emoji-tagger** 可选，表情语义标记
 4. **scripts/update_recent.py** 核心，Skill 调用时增量更新
